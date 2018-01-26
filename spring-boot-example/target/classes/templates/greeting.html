@@ -5,9 +5,8 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 <body>
-    <p th:text="'Hello, ' + ${name} + '!'" />
-
-     <p th:each="paco : ${elPaco}"
-       th:text="${paco}">A Smoke Test</p>
+     <ul th:each="persona : ${listaPersonas}">
+       <span th:text="${persona.name}">Dapibus ac facilisis in</span>
+     </ul>
 </body>
 </html>

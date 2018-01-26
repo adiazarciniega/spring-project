@@ -1,17 +1,27 @@
 package hello;
 
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.ArrayList;
+import java.util.List;
+
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @RestController
 public class HelloController {
 
     @RequestMapping("/")
-    public Persona index() {
-    	Persona elPacoPersona = new Persona();
-    	elPacoPersona.setName("Pacoooo");
-    	elPacoPersona.setAge(41);
-        return elPacoPersona;
+    public List<Persona> index() {
+    	List<Persona> raza = new ArrayList<Persona>();
+    	Persona horacio = new Persona();
+    	horacio.setName("Horacio");
+    	horacio.setAge(41);
+    	Persona luis = new Persona();
+    	luis.setName("Louie");
+    	luis.setAge(66);
+    	raza.add(horacio);
+    	raza.add(luis);
+        return raza;
     }
 
 }
